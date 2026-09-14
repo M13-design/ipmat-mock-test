@@ -3,75 +3,321 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IPMAT Mock Test Platform</title>
+
+<title>Vijaysadhnam | IPMAT Mock Test Platform</title>
 
 <style>
-*{box-sizing:border-box}
-body{
+*{
+  box-sizing:border-box;
   margin:0;
-  font-family:Arial,sans-serif;
-  background:#f6f7fb;
-  color:#172033;
+  padding:0;
 }
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5f7fb;
+  color:#14213d;
+}
+
+/* HEADER */
 header{
-  background:#fff;
+  background:#ffffff;
   padding:18px 7%;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  box-shadow:0 2px 10px #ddd;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
+  position:relative;
+  z-index:5;
 }
-.logo{font-size:24px;font-weight:800}
-.logo span{color:#e63946}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo-mark{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  background:#14213d;
+  color:#ffffff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
+  font-weight:900;
+  border:4px solid #ef3340;
+}
+
+.logo-text{
+  font-size:25px;
+  font-weight:900;
+  letter-spacing:.5px;
+  color:#14213d;
+}
+
+.logo-text span{
+  color:#ef3340;
+}
+
+.header-title{
+  font-size:18px;
+  font-weight:700;
+}
+
+/* HERO */
 .hero{
-  padding:70px 7%;
+  background:linear-gradient(135deg,#101a2d,#263653);
+  color:white;
   text-align:center;
-  background:linear-gradient(135deg,#111827,#374151);
-  color:white;
+  padding:75px 7%;
 }
-.hero h1{font-size:44px;margin:10px 0}
-.hero p{font-size:19px}
-.container{
-  max-width:1100px;
-  margin:40px auto;
-  padding:0 20px;
+
+.hero-small{
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:13px;
+  margin-bottom:18px;
+  opacity:.85;
 }
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:22px;
+
+.hero h1{
+  font-size:clamp(42px,7vw,72px);
+  line-height:1.05;
+  margin-bottom:18px;
 }
-.card{
-  background:white;
-  padding:28px;
-  border-radius:18px;
-  box-shadow:0 5px 20px #ddd;
+
+.hero h1 span{
+  color:#ef3340;
 }
-.card h2{margin-top:0}
-button{
-  border:0;
-  padding:13px 22px;
-  border-radius:10px;
-  background:#e63946;
-  color:white;
-  font-size:16px;
-  font-weight:bold;
-  cursor:pointer;
+
+.hero p{
+  font-size:21px;
+  margin:auto;
+  max-width:700px;
+  line-height:1.6;
 }
-button:hover{opacity:.9}
-.badge{
+
+.cta{
   display:inline-block;
-  background:#eef2ff;
-  padding:7px 12px;
-  border-radius:20px;
+  margin-top:32px;
+  background:#ef3340;
+  color:white;
+  text-decoration:none;
+  padding:17px 35px;
+  border-radius:10px;
+  font-size:18px;
+  font-weight:800;
+  transition:.2s;
+}
+
+.cta:hover{
+  transform:translateY(-2px);
+}
+
+/* FEATURES */
+.features{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  flex-wrap:wrap;
+  padding:45px 7%;
+  background:white;
+}
+
+.feature{
+  width:220px;
+  text-align:center;
+}
+
+.feature-icon{
+  font-size:35px;
   margin-bottom:12px;
 }
-footer{
+
+.feature h3{
+  margin-bottom:8px;
+}
+
+.feature p{
+  color:#64748b;
+  line-height:1.5;
+}
+
+/* TEST SECTION */
+.tests{
+  padding:70px 7%;
+}
+
+.section-title{
   text-align:center;
-  padding:35px;
-  margin-top:50px;
-  background:#111827;
+  font-size:42px;
+  margin-bottom:12px;
+}
+
+.section-title span{
+  color:#ef3340;
+}
+
+.section-subtitle{
+  text-align:center;
+  font-size:18px;
+  color:#64748b;
+  margin-bottom:45px;
+}
+
+.test-grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:25px;
+}
+
+.test-card{
+  background:white;
+  border-radius:20px;
+  padding:30px;
+  box-shadow:0 8px 25px rgba(20,33,61,.08);
+  border:1px solid #e7ebf2;
+}
+
+.badge{
+  display:inline-block;
+  background:#ffe8eb;
+  color:#d91f30;
+  padding:8px 15px;
+  border-radius:30px;
+  font-size:13px;
+  font-weight:800;
+  margin-bottom:18px;
+}
+
+.test-card h2{
+  font-size:25px;
+  margin-bottom:12px;
+}
+
+.test-card p{
+  color:#64748b;
+  line-height:1.5;
+  margin-bottom:22px;
+}
+
+.start-btn{
+  display:inline-block;
+  background:#ef3340;
   color:white;
+  border:0;
+  padding:14px 25px;
+  border-radius:8px;
+  font-size:16px;
+  font-weight:800;
+  cursor:pointer;
+  text-decoration:none;
+}
+
+/* ABOUT */
+.about{
+  background:white;
+  padding:65px 7%;
+  text-align:center;
+}
+
+.about h2{
+  font-size:38px;
+  margin-bottom:18px;
+}
+
+.about p{
+  max-width:750px;
+  margin:auto;
+  color:#64748b;
+  font-size:18px;
+  line-height:1.7;
+}
+
+/* FOOTER */
+footer{
+  background:#101a2d;
+  color:white;
+  padding:35px 7%;
+  text-align:center;
+}
+
+.footer-logo{
+  font-size:26px;
+  font-weight:900;
+  margin-bottom:10px;
+}
+
+.footer-logo span{
+  color:#ef3340;
+}
+
+footer p{
+  opacity:.75;
+  margin-top:8px;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+  header{
+    padding:15px 5%;
+  }
+
+  .logo-mark{
+    width:40px;
+    height:40px;
+    font-size:21px;
+  }
+
+  .logo-text{
+    font-size:20px;
+  }
+
+  .header-title{
+    font-size:13px;
+  }
+
+  .hero{
+    padding:60px 6%;
+  }
+
+  .hero h1{
+    font-size:45px;
+  }
+
+  .hero p{
+    font-size:18px;
+  }
+
+  .features{
+    padding:35px 5%;
+  }
+
+  .feature{
+    width:42%;
+  }
+
+  .tests{
+    padding:55px 5%;
+  }
+
+  .section-title{
+    font-size:32px;
+  }
+
+  .test-grid{
+    grid-template-columns:1fr;
+  }
+
+  .test-card{
+    padding:25px;
+  }
 }
 </style>
 </head>
@@ -79,73 +325,201 @@ footer{
 <body>
 
 <header>
-  <div class="logo">PRATHAM <span>TEST PREP</span></div>
-  <div>IPMAT MOCK TEST</div>
+
+  <div class="logo">
+    <div class="logo-mark">V</div>
+
+    <div class="logo-text">
+      VIJAYSADHNAM
+    </div>
+  </div>
+
+  <div class="header-title">
+    IPMAT MOCK TEST
+  </div>
+
 </header>
 
+
 <section class="hero">
-  <h1>IPMAT Mock Test Platform</h1>
-  <p>Practice. Perform. Improve. Crack IPMAT.</p>
-  <button onclick="document.getElementById('mocks').scrollIntoView()">
-    Start Your Preparation
-  </button>
+
+  <div class="hero-small">
+    Learn • Practice • Succeed
+  </div>
+
+  <h1>
+    IPMAT <span>Mock Test</span><br>
+    Platform
+  </h1>
+
+  <p>
+    Practice like the real exam. Analyse your performance.
+    Improve your strategy. Move closer to your IIM dream.
+  </p>
+
+  <a href="#tests" class="cta">
+    Start Your Preparation →
+  </a>
+
 </section>
 
-<div class="container" id="mocks">
 
-<h2 style="text-align:center;font-size:32px">
-  Full-Length IPMAT Mock Tests
-</h2>
+<section class="features">
 
-<p style="text-align:center">
-  Select a mock test to begin your preparation.
-</p>
+  <div class="feature">
+    <div class="feature-icon">🎯</div>
+    <h3>Real Exam Experience</h3>
+    <p>Practice with an exam-focused mock test environment.</p>
+  </div>
 
-<div class="cards">
+  <div class="feature">
+    <div class="feature-icon">📊</div>
+    <h3>Detailed Analysis</h3>
+    <p>Understand your performance and identify weak areas.</p>
+  </div>
 
-<div class="card">
-<span class="badge">FULL LENGTH</span>
-<h2>IPMAT Mock Test 1</h2>
-<p>Complete IPMAT-style practice test.</p>
-<button onclick="startTest(1)">Start Test</button>
-</div>
+  <div class="feature">
+    <div class="feature-icon">🧠</div>
+    <h3>Improve Strategy</h3>
+    <p>Build speed, accuracy and smarter test-taking habits.</p>
+  </div>
 
-<div class="card">
-<span class="badge">FULL LENGTH</span>
-<h2>IPMAT Mock Test 2</h2>
-<p>Complete IPMAT-style practice test.</p>
-<button onclick="startTest(2)">Start Test</button>
-</div>
+  <div class="feature">
+    <div class="feature-icon">🏆</div>
+    <h3>Dream IIM</h3>
+    <p>Prepare consistently for the IPMAT journey.</p>
+  </div>
 
-<div class="card">
-<span class="badge">FULL LENGTH</span>
-<h2>IPMAT Mock Test 3</h2>
-<p>Complete IPMAT-style practice test.</p>
-<button onclick="startTest(3)">Start Test</button>
-</div>
+</section>
 
-<div class="card">
-<span class="badge">FULL LENGTH</span>
-<h2>IPMAT Mock Test 4</h2>
-<p>Complete IPMAT-style practice test.</p>
-<button onclick="startTest(4)">Start Test</button>
-</div>
 
-</div>
-</div>
+<section class="tests" id="tests">
+
+  <h2 class="section-title">
+    Full-Length <span>IPMAT</span> Mock Tests
+  </h2>
+
+  <p class="section-subtitle">
+    Select a mock test to begin your preparation.
+  </p>
+
+
+  <div class="test-grid">
+
+    <div class="test-card">
+      <div class="badge">FULL LENGTH</div>
+
+      <h2>IPMAT Mock Test 1</h2>
+
+      <p>
+        Complete IPMAT-style practice test designed
+        to simulate the real examination experience.
+      </p>
+
+      <a href="#" class="start-btn"
+         onclick="startTest(1);return false;">
+        Start Test →
+      </a>
+    </div>
+
+
+    <div class="test-card">
+      <div class="badge">FULL LENGTH</div>
+
+      <h2>IPMAT Mock Test 2</h2>
+
+      <p>
+        Complete IPMAT-style practice test designed
+        to simulate the real examination experience.
+      </p>
+
+      <a href="#" class="start-btn"
+         onclick="startTest(2);return false;">
+        Start Test →
+      </a>
+    </div>
+
+
+    <div class="test-card">
+      <div class="badge">FULL LENGTH</div>
+
+      <h2>IPMAT Mock Test 3</h2>
+
+      <p>
+        Complete IPMAT-style practice test designed
+        to simulate the real examination experience.
+      </p>
+
+      <a href="#" class="start-btn"
+         onclick="startTest(3);return false;">
+        Start Test →
+      </a>
+    </div>
+
+
+    <div class="test-card">
+      <div class="badge">FULL LENGTH</div>
+
+      <h2>IPMAT Mock Test 4</h2>
+
+      <p>
+        Complete IPMAT-style practice test designed
+        to simulate the real examination experience.
+      </p>
+
+      <a href="#" class="start-btn"
+         onclick="startTest(4);return false;">
+        Start Test →
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="about">
+
+  <h2>Why <span style="color:#ef3340;">Vijaysadhnam?</span></h2>
+
+  <p>
+    A focused IPMAT preparation platform built to help
+    students practise, perform, analyse and improve.
+    Your preparation starts here.
+  </p>
+
+</section>
+
 
 <footer>
-<strong>Pratham Test Prep</strong><br>
-IPMAT Mock Test Platform
+
+  <div class="footer-logo">
+    VIJAYSADHNAM
+  </div>
+
+  <p>
+    Learn • Practice • Succeed
+  </p>
+
+  <p>
+    © 2026 Vijaysadhnam. All Rights Reserved.
+  </p>
+
 </footer>
 
+
 <script>
-function startTest(number){
+
+function startTest(testNumber){
+
   alert(
-    "IPMAT Mock Test " + number +
-    " selected. The question paper will be connected in the next step."
+    "IPMAT Mock Test " + testNumber +
+    " will open here.\n\n" +
+    "The complete test engine is our next step."
   );
+
 }
+
 </script>
 
 </body>
