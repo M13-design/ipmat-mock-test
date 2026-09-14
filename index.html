@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IPMAT Mock Test Platform</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f6f7fb;
+  color:#172033;
+}
+header{
+  background:#fff;
+  padding:18px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 2px 10px #ddd;
+}
+.logo{font-size:24px;font-weight:800}
+.logo span{color:#e63946}
+.hero{
+  padding:70px 7%;
+  text-align:center;
+  background:linear-gradient(135deg,#111827,#374151);
+  color:white;
+}
+.hero h1{font-size:44px;margin:10px 0}
+.hero p{font-size:19px}
+.container{
+  max-width:1100px;
+  margin:40px auto;
+  padding:0 20px;
+}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
+}
+.card{
+  background:white;
+  padding:28px;
+  border-radius:18px;
+  box-shadow:0 5px 20px #ddd;
+}
+.card h2{margin-top:0}
+button{
+  border:0;
+  padding:13px 22px;
+  border-radius:10px;
+  background:#e63946;
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+}
+button:hover{opacity:.9}
+.badge{
+  display:inline-block;
+  background:#eef2ff;
+  padding:7px 12px;
+  border-radius:20px;
+  margin-bottom:12px;
+}
+footer{
+  text-align:center;
+  padding:35px;
+  margin-top:50px;
+  background:#111827;
+  color:white;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">PRATHAM <span>TEST PREP</span></div>
+  <div>IPMAT MOCK TEST</div>
+</header>
+
+<section class="hero">
+  <h1>IPMAT Mock Test Platform</h1>
+  <p>Practice. Perform. Improve. Crack IPMAT.</p>
+  <button onclick="document.getElementById('mocks').scrollIntoView()">
+    Start Your Preparation
+  </button>
+</section>
+
+<div class="container" id="mocks">
+
+<h2 style="text-align:center;font-size:32px">
+  Full-Length IPMAT Mock Tests
+</h2>
+
+<p style="text-align:center">
+  Select a mock test to begin your preparation.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<span class="badge">FULL LENGTH</span>
+<h2>IPMAT Mock Test 1</h2>
+<p>Complete IPMAT-style practice test.</p>
+<button onclick="startTest(1)">Start Test</button>
+</div>
+
+<div class="card">
+<span class="badge">FULL LENGTH</span>
+<h2>IPMAT Mock Test 2</h2>
+<p>Complete IPMAT-style practice test.</p>
+<button onclick="startTest(2)">Start Test</button>
+</div>
+
+<div class="card">
+<span class="badge">FULL LENGTH</span>
+<h2>IPMAT Mock Test 3</h2>
+<p>Complete IPMAT-style practice test.</p>
+<button onclick="startTest(3)">Start Test</button>
+</div>
+
+<div class="card">
+<span class="badge">FULL LENGTH</span>
+<h2>IPMAT Mock Test 4</h2>
+<p>Complete IPMAT-style practice test.</p>
+<button onclick="startTest(4)">Start Test</button>
+</div>
+
+</div>
+</div>
+
+<footer>
+<strong>Pratham Test Prep</strong><br>
+IPMAT Mock Test Platform
+</footer>
+
+<script>
+function startTest(number){
+  alert(
+    "IPMAT Mock Test " + number +
+    " selected. The question paper will be connected in the next step."
+  );
+}
+</script>
+
+</body>
+</html>
